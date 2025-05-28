@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors | Modern Edition</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Decorative Circles -->
+        <div class="decorative-circle circle-1"></div>
+        <div class="decorative-circle circle-2"></div>
+        <div class="decorative-circle circle-3"></div>
+        
+        <!-- Particles Background -->
+        <div class="particles" id="particles"></div>
+        
+        <header>
+            <h1>ROCK PAPER SCISSORS</h1>
+            <div class="subtitle">The ultimate battle of wits and chance</div>
+        </header>
+        
+        <div class="PlayBoard">
+            <div class="player-section">
+                <h2>PLAYER</h2>
+                <div class="choice-display" id="player">?</div>
+            </div>
+            
+            <div class="vs">VS</div>
+            
+            <div class="computer-section">
+                <h2>COMPUTER</h2>
+                <div class="choice-display" id="computer">?</div>
+            </div>
+        </div>
+        
+        <div class="result-container">
+            <div class="result" id="result">Choose your weapon!</div>
+        </div>
+        <div class="buttons">
+            <button class="game-btn choice-btn" id="rock" onclick="GameStarter('✊')">
+                <i class="fa-solid fa-hand-fist"></i> ROCK
+            </button>
+            <button class="game-btn choice-btn" id="paper" onclick="GameStarter('✋')">
+                <i class="fa-solid fa-hand"></i> PAPER
+            </button>
+            <button class="game-btn choice-btn" id="scissors" onclick="GameStarter('✌️')">
+                <i class="fa-solid fa-hand-peace"></i> SCISSORS
+            </button>
+            <button class="game-btn reset-btn" id="reset" onclick="ResetScore()">
+                <i class="fa-solid fa-rotate"></i> RESET SCORE
+            </button>
+        </div>
+        
+        <div class="ScoreBoard">
+            <h3>SCOREBOARD</h3>
+            <div class="scores">
+                <li>
+                    <span class="score-label">PLAYER</span>
+                    <span class="score-value" id="ScorePlayer">0</span>
+                </li>
+                <li>
+                    <span class="score-label">COMPUTER</span>
+                    <span class="score-value" id="ScoreComp">0</span>
+                </li>
+                <li>
+                    <span class="score-label">DRAWS</span>
+                    <span class="score-value" id="ScoreDrow">0</span>
+                </li>
+            </div>
+        </div>
+        
+        
+        <div class="action-text">Make your move to start the game!</div>
+        
+        <div class="footer">
+            <p>Modern RPS Game • Designed by @Mujahid zafree • 2023</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
